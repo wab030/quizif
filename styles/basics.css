@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    --cor0: #d8dbe3;
+    --cor1: #c0c5d6;
+    --cor2: #191d32;
+    --cor3: #282F44;
+    --cor4: #567A5C;
+    --cor5: #39564D;
+    --cor6: #3b7637;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+
+.mr-5{
+    margin-right: 5px;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.w100{
+    width: 100%;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.mensagem-erro {
+    font-size: 12px;
+    color: red;
+}

@@ -1,0 +1,127 @@
+body {
+    background: var(--cor0);
+}
+
+.menu {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    /* background-color: rgba(216, 219, 227, 0.2); */
+    /* font-family: 'Poppins', sans-serif;; */
+}
+
+.logo {
+    margin: 5px 30px;
+    width: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.formulario {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.button {
+    background-color: var(--cor6);
+    color: white;
+    width: 100px;
+    height: 35px;
+    padding: 2px 5px;
+    border-radius: 7px;
+    font-size: 1.6rem;    
+}
+
+.descricao {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    /* border: 1px solid black; */
+    box-shadow: 0px -8px 5px 0px rgba(0,0,0,0.75);
+    padding: 2rem;
+}
+
+.questao {
+    display: flex;
+}
+
+.questao-quadro1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areatexto{
+    height: 100px;
+}
+
+.campo {
+    /* display: flex; */
+    font-family: 'Poppins', sans-serif;;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+}
+
+.campo-detalhes{
+    display: flex;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+
+.campo input {
+    margin: 1rem 1rem;
+    /* height: 2.5rem; */
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid black;
+}
+
+#erro-titulo, #erro-descricao, #erro-opcaoa, #erro-opcaob, #erro-opcaoc, #erro-opcaod, #erro-opcaoe, #erro-opcao {
+    display: none;
+}
+
+#erro-opcao{
+    display: none;
+    color: red;
+}
+
+.parceiros {
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+    border-top: 1px solid #ccc;
+    height: 3rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    border-top: 1px solid;
+    box-shadow: 0px -5px 26px -3px rgba(0,0,0,0.75);
+    background-color: var(--cor2);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* .errormessage {
+    display: block;
+} */
+
+/* .questiontitle-error {
+    display: block;
+} */

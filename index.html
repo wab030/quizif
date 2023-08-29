@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizIF</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/basics.css" />
+    <link rel="icon" href="./images/favicon.png">
+  </head>
+
+  <body id="questao" onload="consultaQuestoes()">
+    <header class="menu">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo do quizif" />
+      </div>
+      <nav>
+        <ul>
+          <li>Jogar</li>
+        </ul>
+      </nav>
+      <div>
+        <button class="button mr-5">Sign up</button>
+      </div>
+    </header>
+    <div class="descricao">
+      <h1>Bem vindo, bem vinda ao QuizIF.</h1>
+      <h2>Nessa página você pode cadastrar as questões.</h2>
+    </div>
+    <div class="questao">
+      <div class="questao-quadro1">
+        <form
+          action="http://localhost:5000/php/gravaquestao.php"
+          method="get"
+          class="formulario"
+        >
+          <div class="campo">
+            <label class="negrito" for="titulo">Título da questão</label><br />
+            <input
+              class="w100"
+              type="text"
+              placeholder="Título da questão"
+              id="titulo"
+              name="titulo"
+              required
+              value="Quais são os quatro países da África?"
+            /><br />
+            <p id="erro-titulo" class="mensagem-erro">
+              Título da questão é obrigatório e devem conter entre 1 e 100
+              caracteres
+            </p>
+          </div>
+          <div class="campo">
+            <label class="negrito" for="descricao">Descrição</label><br />
+            <textarea
+              class="areatexto w100"
+              id="descricao"
+              name="descricao"
+              value="Você deve indicar abaixo, qual é a opção que contem somente países do continente africano"
+            ></textarea>
+            <p id="erro-descricao" class="mensagem-erro">
+              Descrição da questão é obrigatório e devem conter entre 5 e 2048
+              caracteres
+            </p>
+          </div>
+          <div class="campo">
+            <label for="disciplina" class="negrito">Disciplina</label><br />
+            <select id="disciplina" name="disciplina" class="w100">
+              <option value="matematica">Matemática</option>
+              <option value="portugues">Português</option>
+              <option value="geografia" selected>Geografia</option>
+              <option value="historia">História</option>
+              <option value="biologia">Biologia</option>
+              <option value="quimica">Química</option>
+              <option value="fisica">Física</option>
+              <option value="sociologia">Sociologia</option>
+              <option value="bancodedados">Banco de Dados</option>
+              <option value="webdinamico">Desenvolvimento Web Dinâmico</option>
+              <option value="logica">Lógica de Programação</option>
+              <option value="ingles">Inglês</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="dificuldade" class="negrito">Dificuldade</label><br />
+            <input type="radio" name="dificuldade" value="superfacil" />Dibas
+            <input type="radio" name="dificuldade" value="facil" />Fácil
+            <input type="radio" name="dificuldade" value="media" checked />Médio
+            <input type="radio" name="dificuldade" value="dificil" />Difícil
+            <input type="radio" name="dificuldade" value="superdificil" />Hard
+            (Chora)
+          </div>
+
+          <div class="campo">
+            <label class="negrito">Opções</label><br />
+            <div class="campo-detalhes">
+              <label for="opcaoa">A)</label>
+              <input
+                type="text"
+                id="opcaoa"
+                name="opcaoa"
+                placeholder="Opção A"
+                class="w100"
+                value="1.Sudão 2.Nigéria 3.Afeganistão 4.África do Sul"
+              />
+            </div>
+          </div>
+          <div class="campo">
+            <div class="campo-detalhes">
+              <label for="opcaoa">B)</label>
+              <input
+                type="text"
+                id="opcaob"
+                name="opcaob"
+                placeholder="Opção B"
+                class="w100"
+                value="1.Sudão 2.Nigéria 3.Chade 4.África do Sul"
+              />
+            </div>
+          </div>
+          <div class="campo">
+            <div class="campo-detalhes">
+              <label for="opcaoa">C)</label>
+              <input
+                type="text"
+                id="opcaoc"
+                name="opcaoc"
+                placeholder="Opção C"
+                class="w100"
+                value="1.Sudão 2.Botsuana 3.Lima 4.África do Sul"
+              />
+            </div>
+          </div>
+          <div class="campo">
+            <div class="campo-detalhes">
+              <label for="opcaoa">D)</label>
+              <input
+                type="text"
+                id="opcaod"
+                name="opcaod"
+                placeholder="Opção D"
+                class="w100"
+                value="1.Tanzania 2.Nigéria 3.Afeganistão 4.África do Sul"
+              />
+            </div>
+          </div>
+          <div class="campo">
+            <div class="campo-detalhes">
+              <label for="opcaoa">E)</label>
+              <input
+                type="text"
+                id="opcaoe"
+                name="opcaoe"
+                placeholder="Opção E"
+                class="w100"
+                value="1.Sudão 2.Argentina 3.Afeganistão 4.África do Sul"
+              />
+            </div>
+          </div>
+          <p id="erro-opcao" class="mensagem-erro">
+            Descrição de todas as opções é obrigatório e devem conter entre 1 e
+            20 caracteres
+          </p>
+          <div class="campo">
+            <label class="negrito">Opção correta</label>
+            <input type="radio" name="opcaocorreta" value="a" />A
+            <input type="radio" name="opcaocorreta" value="b" checked />B
+            <input type="radio" name="opcaocorreta" value="c" />C
+            <input type="radio" name="opcaocorreta" value="d" />D
+            <input type="radio" name="opcaocorreta" value="e" />E
+          </div>
+          <div>
+            <input
+              id="button"
+              class="button center mb-5"
+              type="submit"
+              value="Cadastrar"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="partners">Parceiros</div>
+    <footer class="footer">
+      QuizIF desenvolvido pelas alunas e alunos do 2º ano de informática do IFSP
+      Campinas
+    </footer>
+    <!-- Script session-->
+    <script type="text/javascript" src="./scripts/script.js"></script>
+  </body>
+</html>
